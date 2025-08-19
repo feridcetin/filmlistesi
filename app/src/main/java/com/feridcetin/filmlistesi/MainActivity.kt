@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
-                Log.e("MainActivity", "API isteği sırasında hata oluştu. ${t.message}", t)
+                Log.e("MainActivity", "API isteği sırasında hata oluştu. ${t.cause?.message}", t)
                 Toast.makeText(this@MainActivity, "API'ye bağlanılamadı. Lütfen tekrar deneyin.", Toast.LENGTH_LONG).show()
             }
         })
